@@ -1,0 +1,328 @@
+<div class="signup-background">
+<h3 style="margin-top: 0px; font-size: x-large; text-align: center;">SIGN UP</h3>
+<form >
+<div class="wrapper">
+    <div class="row">
+        <div [formGroup]="myForm" class="card col-md-4 offset-md-4 shadow-lg p-3 mb-5 bg-green">
+          
+
+            <div class="form-group">
+                <label for="acno">First Name: *</label>
+               <input type="text" [(ngModel)]="signup.name" formControlName="firstName" name="firstName" class="form-control" 
+               [ngClass]="{
+                   'is-invalid':myForm.controls.firstName.dirty && myForm.controls.firstName.invalid,
+                   'is-valid':myForm.controls.firstName.dirty && myForm.controls.firstName.valid
+               }"/>
+
+               <div class="invalid-feedback">
+                  <div>First Name is required</div>
+                </div>
+                
+            </div>
+   
+              
+               <div class="form-group">   
+               <label for="acno">Last Name/Family Name: *</label>
+               <input type="text" [(ngModel)]="signup.lastname" formControlName="lastname" name="lastname" class="form-control" 
+               [ngClass]="{
+                   'is-invalid':myForm.controls.lastname.dirty && myForm.controls.lastname.invalid,
+                   'is-valid':myForm.controls.lastname.dirty && myForm.controls.lastname.valid
+               }"/>
+
+               <div class="invalid-feedback">
+                  <div>LAST NAME/FAMILY NAME is required</div>
+                </div>
+
+            </div>
+            
+            <div class="form-group" style="border-radius: 20px;">
+               <label for="acno">Gender: *</label>
+               
+               <select class="selectpicker form-control" style="color: navy;" formControlName="gender" name="gender" [(ngModel)]="signup.gender"
+               [ngClass]="{
+                  'is-invalid':myForm.controls.gender.dirty && myForm.controls.gender.invalid,
+                  'is-valid':myForm.controls.gender.dirty && myForm.controls.gender.valid
+              }">
+              <div class="invalid-feedback">
+               <div>Gender is required</div>
+             </div>
+                  <option value="Male">Male</option>
+				      <option value="Female">Female</option>
+				      <option value="Other">Other</option>
+               </select>
+               
+            </div>
+
+
+            <div class="form-group" style="border-radius: 20px;">
+               <label for="acno">Date of Birth (DD/MM/YYYY): *</label>
+               <input type="date" [(ngModel)]="signup.dob" formControlName="dob" name="dob" class="form-control" 
+               [ngClass]="{
+                   'is-invalid':myForm.controls.dob.dirty && myForm.controls.dob.invalid,
+                   'is-valid':myForm.controls.dob.dirty && myForm.controls.dob.valid
+               }"/>
+
+               <div class="invalid-feedback">
+                  <div>Date of Birth is required</div>
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+               <label for="acno">Father Name/Spouse Name: *</label>
+               <input type="text" [(ngModel)]="signup.fathername" formControlName="fathername" name="fathername" class="form-control" 
+               [ngClass]="{
+                   'is-invalid':myForm.controls.fathername.dirty && myForm.controls.fathername.invalid,
+                   'is-valid':myForm.controls.fathername.dirty && myForm.controls.fathername.valid
+               }"/>
+
+               <div class="invalid-feedback">
+                  <div>Father NAME is required</div>
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+               <label for="acno">Name On Passport: *</label>
+               <input type="text" [(ngModel)]="signup.passportname" formControlName="passportname" name="passportname" class="form-control" 
+               [ngClass]="{
+                   'is-invalid':myForm.controls.passportname.dirty && myForm.controls.passportname.invalid,
+                   'is-valid':myForm.controls.passportname.dirty && myForm.controls.passportname.valid
+               }"/>
+
+               <div class="invalid-feedback">
+                  <div>Passport NAME is required</div>
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+               <label for="acno">Passport Number: *</label>
+               <input type="text" [(ngModel)]="signup.passportnumber" formControlName="passportnumber" name="passportnumber" class="form-control" 
+               [ngClass]="{
+                   'is-invalid':myForm.controls.passportnumber.dirty && myForm.controls.passportnumber.invalid,
+                   'is-valid':myForm.controls.passportnumber.dirty && myForm.controls.passportnumber.valid
+               }"/>
+
+               <div class="invalid-feedback">
+                  <div>Enter the valid Passport Number is required</div>
+                </div>
+
+            </div>
+
+
+            <div class="form-group" style="border-radius: 20px;">
+               <label for="acno">Passport Expiry Date: *</label>
+               <input type="date" [(ngModel)]="signup.expiry" formControlName="expiry" name="expiry" class="form-control" 
+               [ngClass]="{
+                   'is-invalid':myForm.controls.expiry.dirty && myForm.controls.expiry.invalid,
+                   'is-valid':myForm.controls.expiry.dirty && myForm.controls.expiry.valid
+               }"/>
+
+               <div class="invalid-feedback">
+                  <div>Passport Expiry date is required</div>
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+               <label for="acno">Apartment/ Door No./ Block No.: *</label>
+               <input type="text" [(ngModel)]="signup.doorNumber" formControlName="doorNumber" name="doorNumber" class="form-control" 
+               [ngClass]="{
+                   'is-invalid':myForm.controls.doorNumber.dirty && myForm.controls.doorNumber.invalid,
+                   'is-valid':myForm.controls.doorNumber.dirty && myForm.controls.doorNumber.valid
+               }"/>
+
+               <div class="invalid-feedback">
+                  <div>Apartment/ Door No./ Block No. is required</div>
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+               <label for="acno">Road / Street / Post Office: *</label>
+               <input type="text" [(ngModel)]="signup.street" formControlName="street" name="street" class="form-control" 
+               [ngClass]="{
+                   'is-invalid':myForm.controls.street.dirty && myForm.controls.street.invalid,
+                   'is-valid':myForm.controls.street.dirty && myForm.controls.street.valid
+               }"/>
+
+               <div class="invalid-feedback">
+                  <div>Road / Street / Post Office is required</div>
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+               <label for="acno">Area / Locality:</label>
+               <input type="text" [(ngModel)]="signup.area" formControlName="area" name="area" class="form-control" 
+               [ngClass]="{
+                   'is-invalid':myForm.controls.area.dirty && myForm.controls.area.invalid,
+                   'is-valid':myForm.controls.area.dirty && myForm.controls.area.valid
+               }"/>
+
+               <div class="invalid-feedback">
+                  <div>Area / Locality is required</div>
+                </div>
+
+            </div>
+
+               
+               <div class="form-group">
+               <label for="acno">Country: *</label>
+               <input type="text" [(ngModel)]="signup.country" formControlName="country" name="country" class="form-control" 
+               [ngClass]="{
+                   'is-invalid':myForm.controls.country.dirty && myForm.controls.country.invalid,
+                   'is-valid':myForm.controls.country.dirty && myForm.controls.country.valid
+               }"/>
+
+               <div class="invalid-feedback">
+                  <div>Country is required</div>
+                </div>
+
+            </div>
+             
+               <div class="form-group">
+                  <label for="acno">State / Province: *</label>
+               <input type="text" [(ngModel)]="signup.state" formControlName="state" name="state" class="form-control" 
+               [ngClass]="{
+                   'is-invalid':myForm.controls.state.dirty && myForm.controls.state.invalid,
+                   'is-valid':myForm.controls.state.dirty && myForm.controls.state.valid
+               }"/>
+
+               <div class="invalid-feedback">
+                  <div>State / Province is required</div>
+                </div>
+
+            </div>
+
+               <div class="form-group">
+               <label for="acno">Town / City / District: *</label>
+               <input type="text" [(ngModel)]="signup.city" formControlName="city" name="city" class="form-control" 
+               [ngClass]="{
+                   'is-invalid':myForm.controls.city.dirty && myForm.controls.city.invalid,
+                   'is-valid':myForm.controls.city.dirty && myForm.controls.city.valid
+               }"/>
+
+               <div class="invalid-feedback">
+                  <div>Town / City / District is required</div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+               <label for="acno">Postal Code: *</label>
+               <input type="text" [(ngModel)]="signup.postalCode" formControlName="postalCode" name="postalCode" class="form-control" 
+               [ngClass]="{
+                   'is-invalid':myForm.controls.postalCode.dirty && myForm.controls.postalCode.invalid,
+                   'is-valid':myForm.controls.postalCode.dirty && myForm.controls.postalCode.valid
+               }"/>
+
+               <div class="invalid-feedback">
+                  <div>PostalCode is required</div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+               <label for="acno">Land Mark (If Any):</label>
+               <input type="text" [(ngModel)]="signup.landMark" name="landMark" placeholder="">
+            </div>
+
+            <div class="form-group">
+               <label for="acno">Mobile Number: *</label>
+               <input type="text" [(ngModel)]="signup.mobile" formControlName="mobile" name="mobile" class="form-control" 
+               [ngClass]="{
+                   'is-invalid':myForm.controls.mobile.dirty && myForm.controls.mobile.invalid,
+                   'is-valid':myForm.controls.mobile.dirty && myForm.controls.mobile.valid
+               }"/>
+
+               <div class="invalid-feedback">
+                  <div>Enter the valid Mobile Number is required</div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+               <label for="acno">Email Address: *</label>
+               <input type="email" [(ngModel)]="signup.username" formControlName="username" name="username" class="form-control" 
+               [ngClass]="{
+                   'is-invalid':myForm.controls.username.dirty && myForm.controls.username.invalid,
+                   'is-valid':myForm.controls.username.dirty && myForm.controls.username.valid
+               }"/>
+
+               <div class="invalid-feedback">
+                  <div>Email is Invalid</div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+               <label for="acno">Password: *</label>
+               <input type="password" [(ngModel)]="signup.password" name="password" placeholder="">
+            </div>
+
+            <div class="form-group">
+               <label for="acno">Re-enter Password: *</label>
+               <input type="password" name="rpassword" placeholder="">
+            </div>
+
+            <div class="form-group">
+               <label for="pwd">Security Question: *</label>
+               
+               <select class="selectpicker form-control" style="border-radius: 20px;" formControlName="securityQuestion" name="securityQuestion" [(ngModel)]="signup.securityQuestion"
+                  [ngClass]="{
+                     'is-invalid':myForm.controls.securityQuestion.dirty && myForm.controls.securityQuestion.invalid,
+                     'is-valid':myForm.controls.securityQuestion.dirty && myForm.controls.securityQuestion.valid
+                 }">
+                 <div class="invalid-feedback">
+                  <div>securityQuestion is required</div>
+                </div>
+                 
+                  <option>Select Any One</option>
+                   <option value="what was your nick name?">what was your nick name?</option>
+				      <option value="what was your favorite place?">"what was your favorite place?</option>
+                   <option value="In what city did you meet your spouse/significant other?">In what city did you meet your spouse/significant other?</option>
+                   <option value="In what city does your nearest sibling live?">In what city does your nearest sibling live?</option>
+                   <option value="In what city or town did your mother and father meet?">In what city or town did your mother and father meet?</option>
+                   <option value="In which city were you born?">In which city were you born?</option>
+				      <option value="In which state were you born?">In which state were you born?</option>
+				      <option value="who was your childhood hero?">who was your childhood hero?</option>
+				      <option value="what was your favorite city">what was your favorite city?</option>
+				      <option value="what was your favorite country">what was your favorite country?</option>
+				      <option value="what was your favorite number">what was your favorite number?</option>
+				      <option value="what was your old password?">what was your old password?</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="acno">Answer: *</label>
+                <input type="text" [(ngModel)]="signup.answer" formControlName="answer" name="answer" class="form-control" 
+                [ngClass]="{
+                    'is-invalid':myForm.controls.answer.dirty && myForm.controls.answer.invalid,
+                    'is-valid':myForm.controls.answer.dirty && myForm.controls.answer.valid
+                }"/>
+ 
+                <div class="invalid-feedback">
+                   <div>Answer is required</div>
+                 </div>
+ 
+ 
+
+            </div>
+
+            <div class="form-group ">
+                <input class="btn btn-success " style="border-radius: 20px;" type="submit " name="submit_reg " value="Enroll" (click)="save() ">
+            </div>
+  
+        </div>
+    </div>
+</div>
+</form>
+</div>

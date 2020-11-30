@@ -1,0 +1,58 @@
+
+
+<div style="text-align: center;">
+    <h3>Modify A Flight</h3>
+  </div>
+  <div style="width: 400px; margin-left: auto; margin-right: auto;">
+  
+  <form  >
+      <label for="planeId">Schedule Flight ID:</label>
+      <input (blur)="validateId()" type="number" class="form-control" type="number"  [(ngModel)]="planeId"  [ngModelOptions]="{standalone: true}" required  >
+      <!--small *ngIf="idValid" style="color: red;">Invalid ID. Please enter an id between 1 to 999.</small><br>-->
+      <br>
+      <input type="submit" value="SEARCH" class="btn btn-primary" (click)="searchScheduleFlight(planeId)" [disabled]="!planeId">
+      <br><br>
+      <!--<div *ngIf="show">-->
+        <div *ngIf="show">
+        <label><b>Details: </b></label><br>
+        <label for="planeId">Plane Id</label>
+        <input type="text"  class="form-control" [(ngModel)]="airline.planeId" required  name="planeId" readonly >
+        <br>
+        <label for="carrierName">CarrierName</label>
+        <input type="text"  class="form-control" [(ngModel)]="airline.carrierName" required  name="carrierName" >
+        <br>
+        <label for="source">Source</label>
+        <input type="text" #b class="form-control" [(ngModel)]="airline.source" required  name="source" >
+        <br>
+        <label for="destination">Destination</label>
+        <input type="text" #c class="form-control" [(ngModel)]="airline.destination" required  name="destination">
+        <br>
+        <label for="date">Schedule Date</label>
+        <input type="text" #d class="form-control" [(ngModel)]="airline.date" required  name="date" >
+        <br>
+        <label for="duration ">Duration</label>
+        <input type="text" #e class="form-control" [(ngModel)]="airline.duration" required  name="duration" >
+        <br>
+        <label for="starting_time">Starting Time</label>
+        <input type="text" #f class="form-control" [(ngModel)]="airline.starting_time" required name="starting_time" >
+        <br>
+        <label for="ending_time">Ending Time</label>
+        <input type="text" #g class="form-control" [(ngModel)]="airline.ending_time" required  name="ending_time">
+        <br>
+        <label for="prize">Cost of ticket</label>
+        <input type="number" #h class="form-control" [(ngModel)]="airline.prize" required name="prize">
+        <br>
+        <label for="avaliable_seats">Available Seats</label>
+        <input type="number" #i class="form-control" [(ngModel)]="airline.avaliable_seats" required  name="avaliable_seats">
+        <br>
+        <label for="sold_out">Soldout Seats</label>
+        <input type="number" #j class="form-control" [(ngModel)]="airline.sold_out" required  name="sold_out">
+        <div class="invalid-feedback">Please fill out this field.</div>
+        <br>
+       <!--<input type="submit" value="MODIFY" class="btn btn-success" (click)="form.checkValidity() ? modifyScheduledFlight(a.value,b.value,c.value,d.value,e.value,f.value,g.value,h.value,i.value) : null">-->
+       <input  type="submit" class="btn btn-success" name="Update" value="Update Flight" (click)= "modifyFlight()">
+      </div>
+    </form>
+ 
+  
+  

@@ -1,0 +1,73 @@
+
+<div style="text-align: center; background-color: darkblue; height: max-content;">
+  <h3 style="color: azure;">Modify A Flight</h3>
+</div>
+
+<br>
+<div style="background-color: lavender;">
+  
+
+  <div style="width: 400px; margin-left: auto; margin-right: auto;">
+      <form style="align-content: center; align-self: center;" >
+      <label for="planeId">Schedule Flight ID:</label> <br>
+      <input (blur)="validateId()" type="number" class="form-control" type="number"  [(ngModel)]="planeId"  [ngModelOptions]="{standalone: true}" required  >
+      <!--small *ngIf="idValid" style="color: red;">Invalid ID. Please enter an id between 1 to 999.</small><br>-->
+      <br>
+      <div class="form-group row">
+        <div class="col-md-6">
+          <input type="submit" value="SEARCH" class="btn btn-primary" (click)="searchScheduleFlight(planeId)" [disabled]="!planeId">
+        </div>
+        <div class="col-md-6">
+            <input class="btn btn-secondary mt-3 mb-5" type="submit " name="submit_reg " value="cancel" (click)="menu() ">
+        </div>
+    </div>
+
+    </form>
+  </div> 
+</div>
+<div style="background-color: lavenderblush;">
+<!--<div *ngIf="show">-->
+  <div *ngIf="show">
+
+    <div class="panel panel-primary" >
+    <div class="panel-body" class="mt-3 mb-3 mt-5">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Plane Id</th>
+            <th>CarrierName</th>
+                  <th>Source </th>
+                    <th>Destination </th> 
+                    <th>Schedule Date </th>
+                    <th>Duration </th> 
+                    <th>Starting Time </th> 
+                    <th>Ending Time </th>
+                    <th>Cost of ticket </th>
+                    <th>Available Seats </th> 
+                    <th>Soldout Seats</th>
+                    <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let airline of airlines">
+            <td class="text-center">{{airline.planeId}}</td>
+            <td class="text-center">{{airline.carrierName}}</td>
+            <td class="text-center">{{airline.source}}</td>
+            <td class="text-center">{{airline.destination}}</td>
+            <td class="text-center">{{airline.date}}</td>
+            <td class="text-center">{{airline.duration}}</td>
+            <td class="text-center">{{airline.starting_time}}</td>
+            <td class="text-center">{{airline.ending_time}}</td>
+            <td class="text-center">{{airline.prize}}</td>
+            <td class="text-center">{{airline.avaliable_seats}}</td>
+            <td class="text-center">{{airline.sold_out}}</td>
+            <td><button (click)="updateFlight(airline.sno)" class="btn btn-info" style="margin-left: 10px">Modify Flight</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+</div>
+
+  
+  

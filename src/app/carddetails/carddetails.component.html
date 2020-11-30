@@ -1,0 +1,23 @@
+
+<html>
+    <body>
+        
+        <form   style="text-align: center;" class="col-md-4 "  #addform="ngForm"   (ngSubmit)="addCardDetails(addform.value)">
+            <legend>Account Card Details</legend>
+            <div class="form-group">
+                <label>Card Number</label>
+              <input type="number" class="form-control" name="cardNumber" ngModel placeholder="Enter Card Details" required>
+   
+            </div>
+            <div class="form-group">
+                <label>Card Holder Name</label>
+              <input type="text" class="form-control" name="cardHolderName"  ngModel placeholder="Enter Card Holder Name" required>
+   
+            </div>
+        
+     <button style="margin: 5px;" type="submit" class="btn btn-success">Submit</button>
+     <button style="margin: 5px;" type="reset" class="btn btn-success">Reset</button>
+          </form>
+          
+    </body>
+</html>

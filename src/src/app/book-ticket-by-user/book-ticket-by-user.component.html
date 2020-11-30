@@ -1,0 +1,115 @@
+<div style="text-align: center;">
+    <h3  *ngIf="showSearchCities" class="mt-3">Search A Flight</h3>
+  </div>
+  <div style="width: 400px; margin-left: auto; margin-right: auto;">
+  
+  
+  <form  *ngIf="showSearchCities" >
+        <div style="width: 49%; float: left;">
+         <label for="source" class="mt-3 mb-3 mt-5">Select Source City:</label>
+        <select  [(ngModel)]="source" required type="text" class="form-control" name="Source" aria-placeholder="select a Source City">
+
+            <option *ngFor= "let city of cities" [value] ="city.airportCode">
+                {{city.airportCode}}    
+            </option>
+     </select>
+     {{source}}
+    </div>
+<div style="width: 49%; float: right;">
+     <label for="destination" class="mt-3 mb-3 mt-5">Select Destination City:</label>
+     <select   [(ngModel)]="destination"  required type="text" class="form-control" name="destination" aria-placeholder="select a destination City">
+
+         <option *ngFor= "let city of cities" [value] ="city.airportCode">
+             {{city.airportCode}}    
+         </option>
+  </select>
+  {{destination}}
+</div>
+    
+<div class="form-group">
+        <label for="date">Date (DD/MM/YYYY): *</label>
+        <input  class= " mt-3 mb-3" type="date" [(ngModel)]="date" name="date" placeholder="">
+</div>
+  <button class="mt-3 mb-3" class="btn btn-secondary" (click)="searchFlight() ">search</button>
+</form>
+  </div>
+    <div  *ngIf="showFlightTable">
+        <div class="mt-3 mb-3 mt-10">
+          <h2>Available Flights</h2>
+        </div>
+        <div class="panel-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th> carrierName  </th>
+                        <th>source </th>
+                        <th>destination </th> 
+                        <th>date </th>
+                        <th>duration </th> 
+                        <th>starting_time </th> 
+                        <th>ending_time </th>
+                        <th>prize </th>
+                        <th>avaliable_seats </th> 
+                        
+                        <th>Action </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let flight of flights|async">
+                <td class="text-center">{{flight.carrierName}}</td>
+                <td class="text-center">{{flight.source}}</td>
+                <td class="text-center">{{flight.destination}}</td>
+                <td class="text-center">{{flight.date}}</td>
+                <td class="text-center">{{flight.duration}}</td>
+                <td class="text-center">{{flight.starting_time}}</td>
+                <td class="text-center">{{flight.ending_time}}</td>
+                <td class="text-center">{{flight.prize}}</td>
+                <td class="text-center">{{flight.avaliable_seats}}</td>
+                
+                <td><button (click)="bookTicket(flight.planeId)" class="btn btn-secondary">Book Ticket</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div   class="mt-10" *ngIf="showSearchCities" class="panel panel-primary">
+        <div style="text-align: center;">
+            <h3 class="mt-3 mb-3 mt-10" *ngIf="showSearchCities">Available Flights</h3>
+          </div>
+        <div class="panel-body" class="mt-3 mb-3 mt-5">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th> Carrier Name  </th>
+                <th class="text-center">source </th>
+                <th class="text-center">destination </th> 
+                <th class="text-center">date </th>
+                <th class="text-center">duration </th> 
+                <th class="text-center">starting_time </th> 
+                <th class="text-center">ending_time </th>
+                <th class="text-center">prize </th>
+                <th class="text-center">avaliable_seats </th> 
+                        
+                        <th>Action </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let flight of flightsAvailable|async">
+                <td class="text-center">{{flight.carrierName}}</td>
+                <td class="text-center">{{flight.source}}</td>
+                <td class="text-center">{{flight.destination}}</td>
+                <td class="text-center">{{flight.date}}</td>
+                <td class="text-center">{{flight.duration}}</td>
+                <td class="text-center">{{flight.starting_time}}</td>
+                <td class="text-center">{{flight.ending_time}}</td>
+                <td class="text-center">{{flight.prize}}</td>
+                <td class="text-center">{{flight.avaliable_seats}}</td>
+               
+                <td><button (click)="bookTicket(flight.planeId)" class="btn btn-secondary">Book Ticket</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>

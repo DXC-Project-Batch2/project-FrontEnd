@@ -1,0 +1,28 @@
+<br><br><br>
+<div style="text-align: center; background-color: red;">
+    <h3 style="color: aliceblue;">Cancel A Flight</h3>
+  </div>
+  <div style="background-color: honeydew; height: 10cm;">
+  <div style="width: 400px; margin-left: auto; margin-right: auto;">
+  
+    
+  <form>
+    
+      <label for="planeId">Fligt Id:</label>
+      <input (blur)="validateId()" type="number"  class="form-control" [(ngModel)]="planeId" [ngModelOptions]="{standalone: true}" required >
+      <br>
+
+      <div class="form-group row">
+        <div class="col-md-6">
+            <input  type="submit" class="btn btn-success" name="Delete" value="Delete Flight" (click)= "deleteFlight(planeId)" [disabled]="!planeId">
+        </div>
+        <div class="col-md-6">
+            <input class="btn btn-secondary mt-3 mb-5" type="submit " name="submit_reg " value="cancel" (click)="menu() ">
+        </div>
+    </div>
+
+
+      <br><br>
+  </form>
+
+  </div> 

@@ -1,0 +1,38 @@
+<div class="container">
+	<div class="row">
+        <div class="col-sm-5">
+            <h4>Add payment Details</h4>
+            <div class="panel panel-default">
+                <div class="panel-body form-horizontal payment-form">
+                    <div class="form-group">
+                        <label for="dthproviders">Select Wifi Servicer Provider</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" id="wifiproviders" name="wifiproviders">
+                                <option></option>
+                                <option>ACT Fiber Net</option>
+                                <option>Tata Sky</option>
+                                <option>Jio Fiber</option>
+                            </select>
+                        </div>
+                    </div> 
+                    <div class="form-group">
+                        <label for="id" >Servicer Provider Id</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="id" name="id">
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <label for="amount" class="col-sm-3 control-label">Amount</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="amount" name="amount">
+                        </div>
+                    </div>   
+                </div>
+            </div>            
+        </div>
+    </div>
+    <button style="margin: 5px;" type="submit" class="btn btn-info">Pay Bill</button> 
+    <button style="margin: 5px;" type="reset" class="btn btn-danger" routerLink='/Utlitybills'>Cancel</button> 
+</div>

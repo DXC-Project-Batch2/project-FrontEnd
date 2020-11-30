@@ -1,0 +1,24 @@
+
+<html>
+    <body>
+        
+        <form  style="text-align: center;" class="col-md-4 "   #addform="ngForm"   (ngSubmit)="addPayment(addform.value)">
+            <legend>DTH</legend>
+            <div class="form-group">
+                <label>Service Provider ID</label>
+              <input type="number" class="form-control" name="DTHId"  ngModel placeholder="Enter Service Provider ID " required>
+   
+            </div>
+            <div class="form-group">
+                <label>Amount</label>
+              <input type="text" class="form-control" name="amount"  ngModel placeholder="Enter amount" required>
+   
+            </div>
+           
+        
+     <button style="margin: 5px;" type="submit" class="btn btn-success">Submit</button>
+     <button style="margin: 5px;" type="reset" class="btn btn-success">Reset</button>
+          </form>
+          
+    </body>
+</html>

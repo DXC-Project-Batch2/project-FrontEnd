@@ -1,0 +1,162 @@
+<div *ngIf="showEntryButton">
+    <button (click)="enterPassengerDetails()" class="btn btn-secondary">Enter Passenger Details</button>
+</div>
+   <div *ngIf="isDataLoaded">
+   <div class="panel panel-primary" style="width: 800px; margin-left: auto; margin-right: auto;">
+        <div style="text-align: center;" class="mt-2 mb-4">
+            <h3>Book Ticket</h3>
+          </div>
+        <form>
+            <fieldset>
+               <div *ngIf="p1">
+                <div  class="mt-2 mb-4">
+                    <h3>Passenger1 details</h3>
+                  </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: left;">
+                    <label for="name">Name</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger1.name" name="name" id="txt" required placeholder="Enter name" />
+                </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: right;">
+                    <label for="govt_id">govt_id</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger1.govt_id" name="govt_id" id="txt" required placeholder="Enter govt_id" />
+                </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: left;">
+                    <label for="gender">Gender</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger1.gender" name="gender" id="txt" required placeholder="Enter gender" />                
+                </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: left;">
+                    <label for="age">Age</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger1.age" name="age" id="txt" required placeholder="Enter age" />                
+                </div>
+            </div>
+
+            <div *ngIf="p2">
+                <div  class="mt-2 mb-4">
+                    <h3>Passenger2 details</h3>
+                  </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: left;">
+                    <label for="name">Name</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger2.name" name="name" id="txt" required placeholder="Enter name" />
+                </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: right;">
+                    <label for="govt_id">govt_id</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger2.govt_id" name="govt_id" id="txt" required placeholder="Enter govt_id" />
+                </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: left;">
+                    <label for="gender">Gender</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger2.gender" name="gender" id="txt" required placeholder="Enter gender" />                
+                </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: left;">
+                    <label for="age">Age</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger2.age" name="age" id="txt" required placeholder="Enter age" />                
+                </div>
+            </div>
+            <div *ngIf="p3">
+                <div  class="mt-2 mb-4">
+                    <h3>Passenger3 details</h3>
+                  </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: left;">
+                    <label for="name">Name</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger3.name" name="name" id="txt" required placeholder="Enter name" />
+                </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: right;">
+                    <label for="govt_id">govt_id</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger3.govt_id" name="govt_id" id="txt" required placeholder="Enter govt_id" />
+                </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: left;">
+                    <label for="gender">Gender</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger3.gender" name="gender" id="txt" required placeholder="Enter gender" />                
+                </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: left;">
+                    <label for="age">Age</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger3.age" name="age" id="txt" required placeholder="Enter age" />                
+                </div>
+            </div>
+            <div *ngIf="p4">
+                <div  class="mt-2 mb-4">
+                    <h3>Passenger4 details</h3>
+                  </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: left;">
+                    <label for="name">Name</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger4.name" name="name" id="txt" required placeholder="Enter name" />
+                </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: right;">
+                    <label for="govt_id">govt_id</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger4.govt_id" name="govt_id" id="txt" required placeholder="Enter govt_id" />
+                </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: left;">
+                    <label for="gender">Gender</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger4.gender" name="gender" id="txt" required placeholder="Enter gender" />                
+                </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: left;">
+                    <label for="age">Age</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger4.age" name="age" id="txt" required placeholder="Enter age" />                
+                </div>
+            </div>
+            <div *ngIf="p5">
+                <div  class="mt-2 mb-4">
+                    <h3>Passenger5 details</h3>
+                  </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: left;">
+                    <label for="name">Name</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger5.name" name="name" id="txt" required placeholder="Enter name" />
+                </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: right;">
+                    <label for="govt_id">govt_id</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger5.govt_id" name="govt_id" id="txt" required placeholder="Enter govt_id" />
+                </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: left;">
+                    <label for="gender">Gender</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger5.gender" name="gender" id="txt" required placeholder="Enter gender" />                
+                </div>
+                <div class="form-group ml-1 mr-1" style="width: 49%; float: left;">
+                    <label for="age">Age</label>
+                    <input class="form-control" type="text" [(ngModel)]="passenger5.age" name="age" id="txt" required placeholder="Enter age" />                
+                </div>
+            </div>          
+
+            <div class="form-group " style="text-align: center;">
+                <input class="btn btn-secondary mt-3 mb-10" type="submit " name="submit_reg " value="Book Ticket" (click)="bookTicket() ">
+            </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<div *ngIf="showTicket" >
+    <div class="panel panel-primary  padding: 25px; " style="width: 800px; margin-left: auto; margin-right: auto;">
+      <div style="text-align: center;" class="mt-2 mb-4">
+          <h3>Ticket</h3>
+        </div>
+        <section  class="panel panel-primary" style="border: 2px solid black; padding: 25px; margin: 4%;">
+          <h5><b>Your Booking has been confirmed.</b></h5>
+          
+          <div>
+              <b>Flight Details:</b><br>
+             <table class="mt-3">
+           <tr>   <td><b>Number</b></td><td>&nbsp;:&nbsp;</td><td>{{flight.planeId}}</td> </tr>
+           <tr>   <td><b>Carrier Name</b></td><td>&nbsp;:&nbsp;</td><td>{{flight.carrierName}}</td> </tr>
+          <tr><td><b>Source</b></td><td>&nbsp;:&nbsp;</td><td> {{flight.source}}</td></tr>               
+          <tr> <td><b>Destination</b></td><td>&nbsp;:&nbsp;</td><td> {{flight.destination}}</td></tr>
+          <tr> <td><b>Departure</b></td><td>&nbsp;:&nbsp;</td><td> {{flight.starting_time}}</td></tr>
+          <tr> <td><b>Arrival</b></td><td>&nbsp;:&nbsp;</td><td> {{flight.ending_time}}</td></tr>
+          </table>
+          </div><br>
+          <!-- <div>
+              <b>Passenger Details:</b><br>
+              <table>
+                  <tr *ngFor="index as i">
+                      <td>Passenger:<br>
+                          PNR: <br>
+                          Name: <br>
+                          Age: &nbsp; Gender: &nbsp; ID: 
+                      </td>
+                  </tr>
+              </table>
+          </div><br> -->
+          
+        </section>
+  
+  
+      </div>
+</div>

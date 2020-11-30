@@ -1,0 +1,19 @@
+<table class="table table-dark  col-md-6">
+
+    <tr> 
+    <th>transactionId</th>
+    <th>transactionType</th>
+    <th>transactionDate</th>
+    <th>amount</th> </tr>
+
+    <tr *ngFor="let statement of statementList">
+
+            <td>{{statement.transactionId}}</td>
+            <td>{{statement.transactionType}}</td>
+            <td>{{statement.transactionDate}}</td>
+            <td>{{statement.amount}}</td>
+
+    </tr>
+
+
+    </table>

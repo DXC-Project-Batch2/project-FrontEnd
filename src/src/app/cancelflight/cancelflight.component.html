@@ -1,0 +1,16 @@
+<div style="text-align: center;">
+    <h3>Cancel A Flight</h3>
+  </div>
+  <div style="width: 400px; margin-left: auto; margin-right: auto;">
+  
+  
+  <form   >
+    
+      <label for="planeId">Fligt Id:</label>
+      <input type="number"  class="form-control" [(ngModel)]="planeId" required  name="planeId">
+      <br>
+
+      <input  type="submit" class="btn btn-success" name="Delete" value="Delete Flight" (click)= "deleteFlight()">
+  </form>
+
+  </div>

@@ -1,0 +1,69 @@
+<h3>Add Flight Details</h3>
+<div style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="planeId">planeId</label>
+        <input type="text" class="form-control" id="planeId" required [(ngModel)]="airline.planeId" name="planeId">
+      </div>
+
+      <div class="form-group">
+        <label for="carrierName">CarrierName</label>
+        <input type="text" class="form-control" id="carrierName" required [(ngModel)]="airline.carrierName" name="carrierName" >
+      </div>
+
+      <div class="form-group">
+        <label for="source">Source</label>
+        <input type="text" class="form-control" id="source" required [(ngModel)]="airline.source" name="source" >
+      </div>
+
+      <div class="form-group">
+        <label for="destination">Destination</label>
+        <input type="text" class="form-control" id="destination" required [(ngModel)]="airline.destination" name="destination" >
+      </div>
+
+      <div class="form-group">
+        <label for="date">Schedule Date</label>
+        <input type="date" class="form-control" id="date" required [(ngModel)]="airline.date " name="date " >
+      </div>
+
+      <div class="form-group">
+        <label for="duration ">Duration</label>
+        <input type="text" class="form-control" id="duration " required [(ngModel)]="airline.duration " name="duration  " >
+      </div>
+
+      <div class="form-group">
+        <label for="starting_time">Starting Time</label>
+        <input type="text" class="form-control" id="starting_time " required [(ngModel)]="airline.starting_time " name="starting_time " >
+      </div>
+
+      <div class="form-group">
+        <label for="ending_time">Ending Time</label>
+        <input type="text" class="form-control" id="ending_time " required [(ngModel)]="airline.ending_time" name="ending_time " >
+      </div>
+
+      <div class="form-group">
+        <label for="prize">Cost of ticket</label>
+        <input type="text" class="form-control" id="prize " required [(ngModel)]="airline.prize" name="prize" >
+      </div>
+
+      <div class="form-group">
+        <label for="avaliable_seats">Available Seats</label>
+        <input type="text" class="form-control" id="avaliable_seats" required [(ngModel)]="airline.avaliable_seats" name="avaliable_seats" >
+      </div>
+
+      <div class="form-group">
+        <label for="sold_out">Soldout Seats</label>
+        <input type="text" class="form-control" id="sold_out" required [(ngModel)]="airline.sold_out" name="sold_out" >
+      </div>
+
+
+      <button type="submit" class="btn btn-success">Submit</button>
+      <!--<button type="reset" class="btn btn-success">Resset</button>-->
+    </form>
+</div>
+
+<div [hidden]="!submitted">
+    <h4>Submitted Successfully</h4>
+</div>
+
+

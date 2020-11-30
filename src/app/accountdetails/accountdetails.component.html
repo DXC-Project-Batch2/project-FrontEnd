@@ -1,0 +1,28 @@
+
+<html>
+    <body>
+        
+        <form  style="text-align: center;" class="col-md-4 "   #addform="ngForm"   (ngSubmit)="addDetails(addform.value)">
+            <legend>Account Details</legend>
+            <div class="form-group">
+                <label>Account Number</label>
+              <input type="number" class="form-control" name="accountNumber"  ngModel placeholder="Enter From Account" required>
+   
+            </div>
+            <div class="form-group">
+                <label>Account Holder Name</label>
+              <input type="text" class="form-control" name="accountHolderName"  ngModel placeholder="Enter Holder Name" required>
+   
+            </div>
+            <div class="form-group">
+                <label>Bank IFSC Code</label>
+              <input type="text" class="form-control" name="bankIFSC"  ngModel placeholder="Enter IFSC Code" required>
+   
+            </div>
+        
+     <button style="margin: 5px;" type="submit" class="btn btn-success">Submit</button>
+     <button style="margin: 5px;" type="reset" class="btn btn-success">Reset</button>
+          </form>
+          
+    </body>
+</html>

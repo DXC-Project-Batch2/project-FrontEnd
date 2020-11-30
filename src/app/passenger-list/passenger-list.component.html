@@ -1,0 +1,37 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>List of Passangers</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Flight Id</th>
+            <th>UserName</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Government Id</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let passenger of passengers | async">
+            <td>{{passenger.flight_id}}</td>
+            <td>{{passenger.username}}</td>
+            <td>{{passenger.name}}</td>
+            <td>{{passenger.gender}}</td>
+            <td>{{passenger.age}}</td>
+            <td>{{passenger.govt_id}}</td>
+            <!--<td><button (click)="removePassenger(passenger.govt_id)" class="btn btn-danger">Delete</button>
+            </td>-->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-md-6">
+        <input class="btn btn-secondary mt-3 mb-5" type="submit " name="submit_reg " value="cancel" (click)="menu() ">
+    </div>
+  </div>
+  

@@ -1,0 +1,26 @@
+
+<html>
+    <head>
+        Mini Statement
+    </head>
+    <body>
+        
+        <form   class="col-md-4 "  #addform="ngForm"   (ngSubmit)="debitMoney(addform.value)" >
+            <div class="form-group">
+                <label>Amount</label>
+              <input type="text" class="form-control" name="amount"  ngModel placeholder="Enter From Amount" required>
+   
+            </div>
+            <div class="form-group">
+                <label>Transaction Password</label>
+              <input type="text" class="form-control" name="transactionPassword"  ngModel placeholder="Enter Transaction Password" required>
+   
+            </div>
+            
+        
+     <button style="margin: 5px;" type="submit" class="btn btn-success">Submit</button>
+     <button style="margin: 5px;" type="reset" class="btn btn-success">Reset</button>
+          </form>
+          
+    </body>
+</html>

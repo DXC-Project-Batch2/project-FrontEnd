@@ -1,0 +1,47 @@
+
+
+<div class="header">
+  <img src="assets/logo.png" width=20% height="20%">
+  <a href="#default" class="logo"></a>
+
+  <div class="header-right">
+    <a class="nav-link"*ngIf="(loginservice.isUserLoggedIn()||loginservice.isAdminLoggedIn())"  routerLink="/home">Home
+  <span class="sr-only">(current)</span></a>
+    <a class="nav-link"  *ngIf="!(loginservice.isUserLoggedIn()||loginservice.isAdminLoggedIn())" routerLink="/login">Login</a>
+    <a class="nav-link" *ngIf="loginservice.isUserLoggedIn()" routerLink="/savingsaccount">SavingsAccount</a>
+     <a class="nav-link" *ngIf="loginservice.isUserLoggedIn()" routerLink="/RecurringDeposit">RecurringDeposit</a>
+     <a class="nav-link" *ngIf="loginservice.isUserLoggedIn()" routerLink="/Remittance">RemmitanceAccount</a>
+     <a class="nav-link" *ngIf="loginservice.isUserLoggedIn()" routerLink="/FixedDeposit">FixedDeposit</a>
+     <a class="nav-link" *ngIf="loginservice.isAdminLoggedIn()" routerLink="/FundsDeposit">FundsDeposit</a>
+     <a class="nav-link" *ngIf="loginservice.isAdminLoggedIn()" routerLink="/PeriodicStatement">PeriodicStatement</a>
+     <a class="nav-link" *ngIf="loginservice.isAdminLoggedIn()" routerLink="/AddServiceProvider">AddServiceProvider</a>
+     <a class="nav-link" *ngIf="loginservice.isUserLoggedIn()||loginservice.isAdminLoggedIn()"  routerLink="/logout">Logout</a>
+    <a class="nav-link" *ngIf="!(loginservice.isUserLoggedIn()||loginservice.isAdminLoggedIn())" routerLink="/Register">Register</a>
+    <a class="nav-link" *ngIf="!(loginservice.isUserLoggedIn()||loginservice.isAdminLoggedIn())"  routerLink="/Admin">Admin</a>
+  </div>
+</div>
+
+
+
+
+
+    <router-outlet></router-outlet>
+
+    <div style="text-align: center;">
+
+    <footer      class="footer">
+        
+            <div class="navbar navbar-expand-lg navbar-dark bg-dark static-top">All Rights are Reserved CopyRight <br>
+              
+              ©Instapay 2020</div>
+            
+      
+      </footer>
+
+    </div>
+          
+      
+
+
+
+  

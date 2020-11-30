@@ -1,0 +1,36 @@
+
+<html>
+    <head>
+        Mini Statement
+    </head>
+    <body>
+        
+        <form   class="col-md-4 "  #addform="ngForm"   (ngSubmit)="addAmount(addform.value)">
+            <legend style=text-align:center>Fixed Deposit</legend>
+            <div class="form-group">
+                <label>Account Number</label>
+              <input type="number" class="form-control" name="accountNumber"  ngModel placeholder="Enter From Account" required>
+   
+            </div>
+            <div class="form-group">
+                <label>Deposit Amount</label>
+              <input type="number" class="form-control" name="depositAmount"  ngModel placeholder="Enter Transaction Amount" required>
+   
+            </div>
+            <div class="form-group">
+                <label for="selectperiod">Select period</label>
+                <input type="number" class="form-control" name="period"  ngModel placeholder="Enter period" required> 
+                   
+            </div>
+            <div class="form-group">
+                <label>Rate of Interest</label>
+              <input type="number" class="form-control" name="rateOfInterest"  ngModel placeholder="Enter Rate of Interest" required>
+   
+            </div>
+        
+     <button style="margin: 5px;" type="submit" class="btn btn-success">Submit</button>
+     <button style="margin: 5px;" type="reset" class="btn btn-success">Reset</button>
+          </form>
+          
+    </body>
+</html>

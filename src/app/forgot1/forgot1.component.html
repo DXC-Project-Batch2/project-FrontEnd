@@ -1,0 +1,63 @@
+<div style="background-image: url(../assets/password.jpg); background-size: 100%; height: 18.05cm;">
+<div class="form-gap"></div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="text-center">
+                  <h3><i class="fa fa-lock fa-4x"></i></h3>
+                  <h2 class="text-center">Forgot Password?</h2>
+                  <p>You can reset your password here.</p>
+                  <div class="panel-body">
+    
+                    <form >
+    
+                      <div class="form-group">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                          <input id="username" [(ngModel)]="securityquestion.username" name="username" placeholder="email address" class="form-control"  type="email">
+                        </div>
+                      </div>
+                      
+                      <div class="form-group">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                          
+                          <select class="selectpicker form-control" id="securityQuestion" name="securityQuestion" [(ngModel)]="securityquestion.securityQuestion" placeholder="Select Your security Question"> 
+                          
+                            <option value="what was your nick name?">what was your nick name?</option>
+                       <option value="what was your favorite place?">"what was your favorite place?</option>
+                            <option value="In what city did you meet your spouse/significant other?">In what city did you meet your spouse/significant other?</option>
+                            <option value="In what city does your nearest sibling live?">In what city does your nearest sibling live?</option>
+                            <option value="In what city or town did your mother and father meet?">In what city or town did your mother and father meet?</option>
+                            <option value="In which city were you born?">In which city were you born?</option>
+                       <option value="In which state were you born?">In which state were you born?</option>
+                       <option value="who was your childhood hero?">who was your childhood hero?</option>
+                       <option value="what was your favorite city">what was your favorite city?</option>
+                       <option value="what was your favorite country">what was your favorite country?</option>
+                       <option value="what was your favorite number">what was your favorite number?</option>
+                       <option value="what was your old password?">what was your old password?</option>
+                         </select>
+                     </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                          <input id="answer" name="answer"  [(ngModel)]="securityquestion.answer" placeholder="Answer" class="form-control"  type="text">
+                        </div>
+                      </div>
+                      <div class="form-group ">
+                        <input class="btn btn-success " type="submit " name="submit_reg " value="submit" (click)="check() ">
+                    </div>
+               
+                    </form>
+    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+	</div>
+</div>
+</div>

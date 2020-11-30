@@ -1,0 +1,119 @@
+<div style="background-color:lavenderblush;height: 17.85cm;">
+<div *ngIf="showBooking">
+<div class="panel panel-primary" style="width: 800px; margin-left: auto; margin-right: auto;">
+    <div style="text-align: center;" class="mt-2 mb-4">
+        <h3>Book Ticket</h3>
+      </div>
+    <form>
+        <fieldset>
+            <div class="form-group ml-1 mr-1" style="width: 33%; float: left;">
+                <label for="name">PlaneID</label>
+                <input readonly class="form-control" type="text" [(ngModel)]="flight.planeId" name="planeId" id="txt"  />
+            </div>
+
+            <div class="form-group ml-1 mr-1"  style="width: 32%; float: right;">
+                <label for="name">Source</label>
+                <input readonly class="form-control" type="text" [(ngModel)]="flight.source" name="source" id="txt"  />
+            </div>
+            <div class="form-group ml-1 mr-1" style="width: 32%; float: right;">
+                <label for="name">Destination</label>
+                <input readonly class="form-control" type="text" [(ngModel)]="flight.destination" name="destination" id="txt"  />
+            </div>
+            <div class="form-group ml-1 mr-1" style="width: 33%; float: right;">
+                <label for="name">Date</label>
+                <input readonly class="form-control" type="text" [(ngModel)]="flight.date" name="date" id="txt"  />
+            </div>
+            <div class="form-group ml-1 mr-1"  style="width: 32%; float: right;"> 
+                <label for="name">Duration</label>
+                <input readonly class="form-control" type="text" [(ngModel)]="flight.duration" name="duration" id="txt"  />
+            </div>
+            <div class="form-group ml-1 mr-1"  style="width: 32%; float: right;">
+                <label for="name">Starting Time</label>
+                <input readonly class="form-control" type="text" [(ngModel)]="flight.starting_time" name="starting_time" id="txt"  />
+            </div>
+            <div class="form-group ml-1 mr-1" style="width: 33%; float: left;">
+                <label for="name">Ending time</label>
+                <input readonly class="form-control" type="text" [(ngModel)]="flight.ending_time" name="ending_time" id="txt"  />
+            </div>
+            <div class="form-group ml-1 mr-1"  style="width: 32%; float: right;">
+                <label for="name">Prize</label>
+                <input readonly class="form-control" type="text" [(ngModel)]="flight.prize" name="prize" id="txt"  />
+            </div>
+            <div class="form-group ml-1 mr-1"  style="width: 32%; float: right;">
+                <label for="name">Available Seats</label>
+                <input readonly class="form-control" type="text" [(ngModel)]="flight.avaliable_seats" name="avaliable_seats" id="txt"  />
+            </div>
+            <div class="form-group ml-1 mr-1" style="width: 48%; float: left;">
+                <label for="name">No.of tickets Sold</label>
+                <input readonly class="form-control" type="text" [(ngModel)]="flight.sold_out" name="sold_out" id="txt"  />
+            </div>
+
+            <div class="form-group ml-1 mr-1" style="width: 48%; float: right;" >
+                <label for="no of passengers">No of Passengers</label>
+                <select class="selectpicker form-control" style="color: navy;" name="noOfPassengers" [(ngModel)]="flight.trip">
+                    <option>Enter noOfPassengers</option>
+                    <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+
+                    </select>
+            </div>
+
+           
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <input class="btn btn-secondary mt-3 mb-10" type="submit " name="submit_reg " value="Book Ticket" (click)="bookTicket() ">   
+                 </div>
+                <div class="col-md-6">
+                    <input class="btn btn-secondary mt-3 mb-10" type="submit " name="submit_reg " value="cancel" (click)="menu() ">
+                </div>
+            </div>
+
+
+
+
+
+        </fieldset>
+    </form>
+</div>
+</div>
+<div *ngIf="showTicket" >
+      <div class="panel panel-primary  padding: 25px; " style="width: 800px; margin-left: auto; margin-right: auto;">
+        <div style="text-align: center;" class="mt-2 mb-4">
+            <h3>Ticket</h3>
+          </div>
+          <section  class="panel panel-primary" style="border: 2px solid black; padding: 25px; margin: 4%;">
+            <h5><b>Your Booking has been confirmed.</b></h5>
+            
+            <div>
+                <b>Flight Details:</b><br>
+               <table class="mt-3">
+             <tr>   <td><b>Number</b></td><td>&nbsp;:&nbsp;</td><td>{{flight.planeId}}</td> </tr>
+             <tr>   <td><b>Carrier Name</b></td><td>&nbsp;:&nbsp;</td><td>{{flight.carrierName}}</td> </tr>
+            <tr><td><b>Source</b></td><td>&nbsp;:&nbsp;</td><td> {{flight.source}}</td></tr>               
+            <tr> <td><b>Destination</b></td><td>&nbsp;:&nbsp;</td><td> {{flight.destination}}</td></tr>
+            <tr> <td><b>Departure</b></td><td>&nbsp;:&nbsp;</td><td> {{flight.starting_time}}</td></tr>
+            <tr> <td><b>Arrival</b></td><td>&nbsp;:&nbsp;</td><td> {{flight.ending_time}}</td></tr>
+            </table>
+            </div><br>
+            <!-- <div>
+                <b>Passenger Details:</b><br>
+                <table>
+                    <tr *ngFor="index as i">
+                        <td>Passenger:<br>
+                            PNR: <br>
+                            Name: <br>
+                            Age: &nbsp; Gender: &nbsp; ID: 
+                        </td>
+                    </tr>
+                </table>
+            </div><br> -->
+            
+          </section>
+    
+    
+        </div>
+  </div>
+</div>

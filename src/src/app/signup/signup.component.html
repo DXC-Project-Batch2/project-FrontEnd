@@ -1,0 +1,159 @@
+<h3 style="margin-top: 10px; font-size: x-large; text-align: center;">Sign Up</h3>
+<form >
+<div class="wrapper">
+    <div class="row">
+        <div class="card col-md-4 offset-md-4 shadow-lg p-3 mb-5 bg-green">
+          
+
+            <div class="form-group">
+                <label for="acno">First Name/Given Name: *</label>
+               <input type="text" [(ngModel)]="signup.name" name="firstname" placeholder="">
+
+            </div>
+   
+              
+               <div class="form-group">   
+               <label for="acno">Last Name/Family Name: *</label>
+               <input type="text" [(ngModel)]="signup.lastname" name="lastname" placeholder="">
+
+            </div>
+            
+            <div class="form-group">
+               <label for="acno">Gender: *</label>
+               
+               <select class="selectpicker form-control" name="gender" [(ngModel)]="signup.gender">
+                  <option>Select One</option>
+                  <option value="Male">Male</option>
+				      <option value="Female">Female</option>
+				      <option value="Other">Other</option>
+               </select>
+            </div>
+
+
+            <div class="form-group">
+               <label for="acno">Date of Birth (DD/MM/YYYY): *</label>
+               <input type="date" [(ngModel)]="signup.dob" name="dob" placeholder="">
+            </div>
+
+
+            <div class="form-group">
+               <label for="acno">Father Name/Spouse Name: *</label>
+               <input type="text" [(ngModel)]="signup.fathername" name="fathername" placeholder="">
+            </div>
+
+
+            <div class="form-group">
+               <label for="acno">Name On Passport: *</label>
+               <input type="text" [(ngModel)]="signup.passportname" name="passportname" placeholder="">
+            </div>
+
+
+            <div class="form-group">
+               <label for="acno">Passport Number: *</label>
+               <input type="text" [(ngModel)]="signup.passportnumber" name="passportnumber" placeholder="">
+            </div>
+
+
+            <div class="form-group">
+               <label for="acno">Passport Expiry Date: *</label>
+               <input type="date" [(ngModel)]="signup.expiry" name="expiry" placeholder="">
+            </div>
+
+
+            <div class="form-group">
+               <label for="acno">Apartment/ Door No./ Block No.: *</label>
+               <input type="text" [(ngModel)]="signup.doorNumber" name="doorNumber" placeholder="">
+            </div>
+
+
+            <div class="form-group">
+               <label for="acno">Road / Street / Post Office: *</label>
+               <input type="text" [(ngModel)]="signup.street" name="street" placeholder="">
+            </div>
+
+
+            <div class="form-group">
+               <label for="acno">Area / Locality:</label>
+               <input type="text" [(ngModel)]="signup.area" name="area" placeholder="">
+            </div>
+
+               
+               <div class="form-group">
+               <label for="acno">Country: *</label>
+               <input type="text" [(ngModel)]="signup.country" name="country" placeholder="">
+            </div>
+             
+               <div class="form-group">
+                  <label for="acno">State / Province: *</label>
+               <input type="text" [(ngModel)]="signup.state" name="state" placeholder="">
+            </div>
+
+               <div class="form-group">
+               <label for="acno">Town / City / District: *</label>
+               <input type="text" [(ngModel)]="signup.city" name="city" placeholder="">
+            </div>
+
+            <div class="form-group">
+               <label for="acno">Postal Code: *</label>
+               <input type="text" [(ngModel)]="signup.postalCode" name="postalCode" placeholder="">
+            </div>
+
+            <div class="form-group">
+               <label for="acno">Land Mark (If Any):</label>
+               <input type="text" [(ngModel)]="signup.landMark" name="landMark" placeholder="">
+            </div>
+
+            <div class="form-group">
+               <label for="acno">Mobile Number: *</label>
+               <input type="text" [(ngModel)]="signup.mobile" name="mobile" placeholder="">
+            </div>
+
+            <div class="form-group">
+               <label for="acno">Email Address: *</label>
+               <input type="email" [(ngModel)]="signup.username" name="username" placeholder="">
+            </div>
+
+            <div class="form-group">
+               <label for="acno">Password: *</label>
+               <input type="password" [(ngModel)]="signup.password" name="password" placeholder="">
+            </div>
+
+            <div class="form-group">
+               <label for="acno">Re-enter Password: *</label>
+               <input type="password" name="rpassword" placeholder="">
+            </div>
+
+            <div class="form-group">
+               <label for="pwd">Security Question: *</label>
+               
+               <select class="selectpicker form-control" name="securityQuestion" [(ngModel)]="signup.securityQuestion">
+                   <option>Select Any One</option>
+                   <option value="what was your nick name?">what was your nick name?</option>
+				      <option value="what was your favorite place?">"what was your favorite place?</option>
+                   <option value="In what city did you meet your spouse/significant other?">In what city did you meet your spouse/significant other?</option>
+                   <option value="In what city does your nearest sibling live?">In what city does your nearest sibling live?</option>
+                   <option value="In what city or town did your mother and father meet?">In what city or town did your mother and father meet?</option>
+                   <option value="In which city were you born?">In which city were you born?</option>
+				      <option value="In which state were you born?">In which state were you born?</option>
+				      <option value="who was your childhood hero?">who was your childhood hero?</option>
+				      <option value="what was your favorite city">what was your favorite city?</option>
+				      <option value="what was your favorite country">what was your favorite country?</option>
+				      <option value="what was your favorite number">what was your favorite number?</option>
+				      <option value="what was your old password?">what was your old password?</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="acno">Answer: *</label>
+                <input type="text" [(ngModel)]="signup.answer" name="answer" placeholder="">
+
+            </div>
+
+            <div class="form-group ">
+                <input class="btn btn-success " type="submit " name="submit_reg " value="Enroll" (click)="save() ">
+            </div>
+  
+        </div>
+    </div>
+</div>
+</form>

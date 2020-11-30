@@ -1,0 +1,17 @@
+<div style="text-align: center;">
+    <h3>Cancel A Ticket</h3>
+  </div>
+  <div style="width: 400px; margin-left: auto; margin-right: auto;">
+  
+  
+  <form   >
+    
+      <label for="ticketId">Ticket Id:</label>
+      <input type="number" class="form-control" name="ticketId"  [(ngModel)]="ticketId" placeholder="Enter Ticket Id" >
+      {{ticketId}}
+      <br>
+
+      <button class="btn btn-danger"  (click)="cancelTicket()">Canel Ticket</button>
+  </form>
+
+  </div>

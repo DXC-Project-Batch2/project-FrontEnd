@@ -1,0 +1,36 @@
+<div style="background-color: darkblue; height: auto; align-content: center;">
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2 style="text-align: center; color: greenyellow;">List of Airports</h2>
+    </div>
+    <br> <br>
+    
+    <div class="panel-body" style="background-color: whitesmoke; height: auto;">
+      <table class="table table-striped">
+        <thead>
+          <tr style="background-color: bisque; height: auto;">
+            <th>AirportCode</th>
+            <th>AirportName</th>
+            <th>AirportLocation</th>
+            <th>Action</th>
+          </tr>
+        </thead><br>
+        <tbody>
+          <tr *ngFor="let airport of airports | async">
+            <td>{{airport.airportCode}}</td>
+            <td>{{airport.airportName}}</td>
+            <td>{{airport.airportLocation}}</td>
+            <td><button (click)="removeAirport(airport.airportCode)" class="btn btn-danger">Delete</button>
+              <button (click)="updateAirport(airport.airportCode)" class="btn btn-info" style="margin-left: 10px">update</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="form-group row">
+  <div class="col-md-6">
+      <input class="btn btn-secondary mt-3 mb-5" type="submit " name="submit_reg " value="cancel" (click)="menu() ">
+  </div>
+</div>

@@ -1,0 +1,12 @@
+#aboutus{
+  position: absolute;
+  right: 100px;
+}
+
+.footer{
+  background-image: linear-gradient(15deg, #00000025 0%, #00000025 100%);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}

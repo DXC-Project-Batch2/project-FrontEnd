@@ -1,0 +1,101 @@
+<div class="add-flight-background">
+  <h3 style="margin-top: 0px; font-size: x-large; text-align: center;">Add Flight Details</h3> 
+  <div class="card col-md-4 offset-md-4 shadow-lg p-3 mb-5 bg-green">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="planeId">plane Id</label>
+        <input type="text" class="form-control" id="planeId" required [(ngModel)]="airline.planeId" name="planeId">
+      </div>
+
+      <div class="form-group">
+        <label for="carrierName">Carrier Name</label>
+        <input type="text" class="form-control" id="carrierName" required [(ngModel)]="airline.carrierName" name="carrierName" >
+      </div>
+
+      <div class="form-group">
+        <label for="source">Source</label>
+        <select  [(ngModel)]="airline.source" required type="text" class="form-control" name="Source" aria-placeholder="select a Source City">
+
+          <option *ngFor= "let city of cities" [value] ="city.airportName">
+              {{city.airportName}}    
+          </option>
+         </select>
+      </div>
+
+      <div class="form-group">
+        <label for="destination">Destination</label>
+        <select  [(ngModel)]="airline.destination" required type="text" class="form-control" name="destination" aria-placeholder="select a destination City">
+
+          <option *ngFor= "let city of cities" [value] ="city.airportName">
+              {{city.airportName}}    
+          </option>
+         </select>
+
+      </div>
+
+      <div class="form-group">
+        <label for="date">Schedule Date</label>
+        <input type="date" class="form-control" id="date" required [(ngModel)]="airline.date " name="date " >
+      </div>
+
+      <div class="form-group">
+        <label for="trip">No of trips</label>
+        <input type="text" class="form-control" id="trip" required [(ngModel)]="airline.trip " name="trip" >
+      </div>
+
+      <div class="form-group">
+        <label for="schedule_period">Schedule Period</label>
+        <input type="text" class="form-control" id="schedule_period" required [(ngModel)]="airline.schedule_period " name="schedule_period" >
+      </div>
+
+      <div class="form-group">
+        <label for="duration ">Duration</label>
+        <input type="text" class="form-control" id="duration " required [(ngModel)]="airline.duration " name="duration  " >
+      </div>
+
+      <div class="form-group">
+        <label for="starting_time">Starting Time</label>
+        <input type="text" class="form-control" id="starting_time " required [(ngModel)]="airline.starting_time " name="starting_time " >
+      </div>
+
+      <div class="form-group">
+        <label for="ending_time">Ending Time</label>
+        <input type="text" class="form-control" id="ending_time " required [(ngModel)]="airline.ending_time" name="ending_time " >
+      </div>
+
+      <div class="form-group">
+        <label for="prize">Cost of ticket</label>
+        <input type="text" class="form-control" id="prize " required [(ngModel)]="airline.prize" name="prize" >
+      </div>
+
+      <div class="form-group">
+        <label for="avaliable_seats">Available Seats</label>
+        <input type="text" class="form-control" id="avaliable_seats" required [(ngModel)]="airline.avaliable_seats" name="avaliable_seats" >
+      </div>
+
+      <div class="form-group">
+        <label for="sold_out">Soldout Seats</label>
+        <input type="text" class="form-control" id="sold_out" required [(ngModel)]="airline.sold_out" name="sold_out" >
+      </div>
+
+      <div class="form-group row">
+        <div class="col-md-6">
+          <button type="submit" class="btn btn-success" style=" text-align: center; ">Submit</button>
+        </div>
+        <div class="col-md-6">
+            <input class="btn btn-secondary mt-3 mb-5" type="submit " name="submit_reg " value="cancel" (click)="menu() ">
+        </div>
+    </div>
+
+
+       <!--<button type="reset" class="btn btn-success">Resset</button>-->
+    </form>
+    </div>
+
+    <div [hidden]="!submitted">
+    <h4>Submitted Successfully</h4>
+    <br><br><br>
+  </div>
+</div>
+
+

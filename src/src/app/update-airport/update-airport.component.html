@@ -1,0 +1,21 @@
+<h3 style="text-align: center;">Update Airport</h3>
+<div class="container" style="width: 400px;margin-left: auto;margin-right: auto;">
+  <form >
+    <div class="form-group">
+        <label for="name">Airport Code</label>
+        <input [disabled]="true" type="text" class="form-control" id="airportCode" required [(ngModel)]="airport.airportCode" name="airportCode" readonly>
+      </div>
+  
+      <div class="form-group">
+        <label for="name">Airport Name</label>
+        <input type="text" class="form-control" id="airportName" required [(ngModel)]="airport.airportName" name="airportName">
+      </div>
+  
+      <div class="form-group">
+        <label for="name">Airport Location</label>
+        <input type="text" class="form-control" id="airportLocation" required [(ngModel)]="airport.airportLocation" name="airportLocation">
+      </div>
+      <!--<button type="submit" class="btn btn-success" (click)= "updateAirport()">Update</button>-->
+      <input  type="submit" class="btn btn-success" name="Update" value="Update Airport" (click)= "updateAirport()">
+  </form>
+</div>
